@@ -18,7 +18,7 @@ grep "badtemp=" logs/access.log
 just remember to edit the getElementById as needed or adding elements with same id like temperature and footer divs.
 6. ESP32 will send temperature data every 10 seconds.
 
-## Images:
+# Images:
 - **Website:**  
 Example site for displaying temperature uploaded as index.html in the repository.
 ![example](https://github.com/user-attachments/assets/2b0d75cf-b3ae-482d-8584-b52aef73b36a)
