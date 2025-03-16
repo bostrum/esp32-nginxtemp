@@ -16,9 +16,14 @@ just remember to edit the getElementById as needed or adding elements with same 
 6. ESP32 will send temperature data every 10 seconds.
 
 ## Images:
-- Website:  
+- **Website:**  
+Example site for displaying temperature uploaded as index.html in the repository.
 ![example](https://github.com/user-attachments/assets/2b0d75cf-b3ae-482d-8584-b52aef73b36a)
-- Hardware:  
-![New Project (10)](https://github.com/user-attachments/assets/7070934d-0c15-4341-a849-02a82ba061e7)
-- Wiring:  
+- **Hardware:**  
+ESP32, Dallas temperature and a electric junction box for outdoor use.  
+Cable connector for temperature and soon another one for power as well.
+![New Project (10)](https://github.com/user-attachments/assets/7070934d-0c15-4341-a849-02a82ba061e7)  
+- **Wiring:**  
+Please check so pinout is the same on your Arduino before connecting.
+Don't forget connecting the 4.7K ohm resistor between 3.3V and D2. I just cut the cables and soldered it in between.
 ![test](https://github.com/user-attachments/assets/2d71e6e5-caaa-49bf-95a8-22ba4aa8fa5c)
