@@ -20,8 +20,8 @@ just remember to edit the getElementById as needed or adding elements with same 
 Example site for displaying temperature uploaded as index.html in the repository.
 ![example](https://github.com/user-attachments/assets/2b0d75cf-b3ae-482d-8584-b52aef73b36a)
 - **Hardware:**  
-ESP32, Dallas temperature and a electric junction box for outdoor use.  
-Cable connector for temperature and soon another one for power as well.
+ESP32, DS18B20 Dallas waterproof temperature sensor and a electric junction box for outdoor use.  
+Cable connector for sensor cable and soon another one for power as well.
 ![New Project (10)](https://github.com/user-attachments/assets/7070934d-0c15-4341-a849-02a82ba061e7)  
 - **Wiring:**  
 Please check so pinout is the same on your Arduino before connecting.
