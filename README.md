@@ -2,6 +2,9 @@
 IoT sensor using ESP32 with Dallas temperature sensor and reading Nginx access logs.  
 No internal network access, exposed API or VPN required. Just internet connection and a web server.
 
+The ESP32 sends HTTP request to your web server like below every 10 seconds. Which is then read by the bash script, exported to text file, read by javascript on the website and populated in elements with id footer and temperature.  
+"https://yourserver.com/?temperature=12.3"
+
 # Getting started
 1. Clone repository, run bash script as service or cron job on your nginx server.  
 Change variables on line 2-3 for your log file and output file if different.
