@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Temperature</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: orange;
+      color: #000;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #000;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+    }
+    .temperature {
+      font-size: 4em;
+      font-weight: bold;
+      color: #000;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 1em;
+      color: #000;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Temperature</h1>
+  <div class="temperature" id="temperature">Loading...</div>
+  <div class="footer" id="footer">Loading date and time...</div>
+
+  <script>
+    async function fetchTemperature() {
+      try {
+        // get content from .txt file
+        const response = await fetch('temperature.txt');
+        if (!response.ok) {
+          throw new Error('Failed to fetch temperature data');
+        }
+
+        // split semi colon separated date and temperature from text content
+        const data = await response.text();
+        const [datetime, temp] = data.trim().split(';');
+
+        // update elements for date and temperature data
+        document.getElementById('temperature').textContent = `${temp}°C`;
+        document.getElementById('footer').textContent = `Senast uppdaterad ${datetime}`;
+      } catch (error) {
+        document.getElementById('temperature').textContent = 'Error fetching temperature!';
+        document.getElementById('footer').textContent = 'Error fetching date and time!';
+        console.error(error);
+      }
+    }
+    fetchTemperature();
+  </script>
+</body>
+</html>
