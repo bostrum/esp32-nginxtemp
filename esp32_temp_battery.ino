@@ -16,7 +16,7 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 
 // duration for deep sleep
-#define SLEEP_TIME 60e6  // 60 seconds
+#define SLEEP_TIME 300e6
 
 void setup() {
   Serial.begin(115200);
