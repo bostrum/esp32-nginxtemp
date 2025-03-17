@@ -7,9 +7,9 @@ The ESP32 sends HTTP request to your web server like below every 10 seconds. Whi
 
 # Getting started
 1. Clone repository, run bash script as service or cron job on your nginx server.  
-Change variables on line 2-3 for your log file and output file if different.
+Change variables on line [2-3](https://github.com/bostrum/esp32-nginxtemp/blob/994f1878b3333f46a34faba59b8e16189650c71c/nginx_temp.sh#L2-L3) for your log file and output file if different.
 2. Connect Dallas temperature sensor to your ESP32, see wiring diagram below under images. (3.3V, GND, D2 and 4.7K ohm resistor between 3.3V and D2)
-3. Change variables at line 8-10 for your Wi-Fi ssid, password and your server address. (For example: yourwebserver.com)
+3. Edit variables at lines [8-10](https://github.com/bostrum/esp32-nginxtemp/blob/994f1878b3333f46a34faba59b8e16189650c71c/esp32_temp.ino#L8-L10) in 'esp32_temp.ino' for your Wi-Fi ssid, password and your server address. (For example: yourwebserver.com). PS. There is also a 'esp32_temp_battery.ino' using deep sleep, adjust [SLEEP_TIME](https://github.com/bostrum/esp32-nginxtemp/blob/80ae8bbb9e746602f3b4baffc859fbc711478a92/esp32_temp_battery.ino#L19) for longer sleep and better battery life.
 4. Confirm that the temperature is recieved in your nginx access log by running grep like below:
 ````
 grep "temperature=" logs/access.log
