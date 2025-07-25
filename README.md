@@ -6,8 +6,8 @@ The ESP32 sends HTTP request to your web server like below every 10 seconds. Whi
 "https://yourserver.com/?temperature=12.3"
 
 # Example
-My self-hosted example, online unless power outage. Less ess downtime than Azure/O365 (O230) though.
-https://badtunna.kstad.se
+My self-hosted example, online unless power outage. Less ess downtime than Azure/O365 (O230) though.  
+"https://badtunna.kstad.se"
 
 # Getting started
 1. Clone repository, run bash script as service or cron job on your nginx server.  
