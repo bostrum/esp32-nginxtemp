@@ -5,6 +5,10 @@ No internal network access, exposed API or VPN required. Just internet connectio
 The ESP32 sends HTTP request to your web server like below every 10 seconds. Which is then read by the bash script, exported to text file, read by javascript on the website and populated in elements with id footer and temperature.  
 "https://yourserver.com/?temperature=12.3"
 
+# Example
+My self-hosted example, online unless power outage. Less ess downtime than Azure/O365 (O230) though.
+https://badtunna.kstad.se
+
 # Getting started
 1. Clone repository, run bash script as service or cron job on your nginx server.  
 Change variables on line [2-3](https://github.com/bostrum/esp32-nginxtemp/blob/994f1878b3333f46a34faba59b8e16189650c71c/nginx_temp.sh#L2-L3) for your log file and output file if different.
