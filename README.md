@@ -6,7 +6,7 @@ The ESP32 sends HTTP request to your web server like below every 10 seconds. Whi
 "https://yourserver.com/?temperature=12.3"
 
 # Example
-My self-hosted example, online unless power outage. Less downtime than Azure/O365 (O230) though.  
+My self-hosted example, online unless power outage. Less downtime than Azure/O365 (O360) though.  
 "https://badtunna.kstad.se"
 
 # Getting started
